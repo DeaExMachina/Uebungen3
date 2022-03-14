@@ -3,6 +3,8 @@ import com.sun.source.tree.BreakTree;
 public class ZinsDemo {
     public static void main(String[] args) {
         zinsberechnung(2000, 2.25);
+        zinsberechnung(10000, 0.10);
+        zinsberechnung(5450, 0.5);
 
     }
 
