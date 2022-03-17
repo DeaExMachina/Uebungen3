@@ -14,12 +14,16 @@ public class Bahnapp {
         System.out.println(howManyMinutes(1));
         System.out.println(howManyMinutes(3));
         System.out.println(howManyMinutes(6));
+        System.out.println(howManyMinutes(7));
 
 
     }
 
     public static String howManyMinutes(int station) {
         String minutes;
+        String extaTime;
+
+
         return switch (station) {
             case 1 -> minutes = "Bei Station 1 sind es noch 20 Minuten.";
             case 2 -> minutes = "Bei Station 2 sind es noch 16 Minuten.";
@@ -27,6 +31,7 @@ public class Bahnapp {
             case 4 -> minutes = "Bei Station 4 sind es noch 10 Minuten.";
             case 5 -> minutes = "Bei Station 5 sind es noch 3 Minuten.";
             case 6 -> minutes = "Du musst jetzt aussteigen!";
+            case 7 -> extaTime = "Aufgrund einer Baustelle kommt es zu einer Verzögerung von 5 Minuten an Station 3.";
             default -> minutes = null;
         };
 
