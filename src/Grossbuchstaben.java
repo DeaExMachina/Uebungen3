@@ -12,10 +12,14 @@ public class Grossbuchstaben {
         char c = ' ';
         newSentence = newSentence + sentence.charAt(0);
 
-        for (int i = 1; i < sentence.length(); i++) {
+        for (int i = 0; i < sentence.length(); i++) {
             c = sentence.charAt(i);
 
-            if (sentence.charAt(i - 1 ) == ' ') {
+            if (i == 0) {
+                c = Character.toUpperCase(sentence.charAt(i));
+            }
+
+            else if (i > 0 && sentence.charAt(i - 1) == ' '){
                 c = Character.toUpperCase(sentence.charAt(i));
             }
 
