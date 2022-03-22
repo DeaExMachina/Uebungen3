@@ -62,17 +62,17 @@ public class Strafe {
 
     public double getStrafe() {
 
-
+        double kopieStrafe = strafe;
 
         if (anzahl == 1) {
-            strafe = strafe * 0.7;
+            kopieStrafe = strafe * 0.7;
         } else if (anzahl == 2) {
-            strafe = strafe * 0.8;
+            kopieStrafe = strafe * 0.8;
         } else if (anzahl == 3) {
-            strafe = strafe * 0.9;
+            kopieStrafe = strafe * 0.9;
         }
 
-        return strafe;
+        return kopieStrafe;
     }
 
     public static void main(String[] args) {
@@ -85,11 +85,13 @@ public class Strafe {
         //peter.alkohol(0.75); //100
         peter.sonstiges(50); //50
         peter.getStrafe();
-        System.out.println("Der Wert der Gesamtstrafe beträgt für Peter " + peter.strafe + " €");
+        System.out.println("Der Wert der Gesamtstrafe beträgt für Peter " + peter.getStrafe() + " €");
+        System.out.println("Die Anzahl der Strafen beträgt für Peter " + peter.anzahl);
 
         hansi.strafe(100);
         hansi.getStrafe();
-        System.out.println("Der Wert der Gesamtstrafe beträgt für Hansi " + hansi.strafe + " €");
+        System.out.println("Der Wert der Gesamtstrafe beträgt für Hansi " + hansi.getStrafe() + " €");
+        System.out.println("Die Anzahl der Strafen beträgt für Hansi " + hansi.anzahl);
 
 
     }
