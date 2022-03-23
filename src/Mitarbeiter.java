@@ -63,7 +63,6 @@ public class Mitarbeiter {
     }
 
 
-
     public static void main(String[] args) {
         Mitarbeiter hansi = new Mitarbeiter();
         hansi.gehalt = 28000;
